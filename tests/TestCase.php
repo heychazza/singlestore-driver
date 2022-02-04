@@ -2,9 +2,9 @@
 
 namespace Heychazza\SingleStoreDriver\Tests;
 
+use Heychazza\SingleStoreDriver\SingleStoreDriverServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Heychazza\SingleStoreDriver\SingleStoreDriverServiceProvider;
 
 class TestCase extends Orchestra
 {

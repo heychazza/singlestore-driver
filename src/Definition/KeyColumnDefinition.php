@@ -20,12 +20,14 @@ class KeyColumnDefinition extends ColumnDefinition
     public function storeType(StoreType $storeType)
     {
         $this->storeType = $storeType;
+
         return $this;
     }
 
     public function sharded()
     {
         $this->sharded = true;
+
         return $this;
     }
 

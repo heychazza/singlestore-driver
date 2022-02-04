@@ -5,14 +5,9 @@ namespace Heychazza\SingleStoreDriver;
 use Heychazza\SingleStoreDriver\Blueprint\SingleStoreBlueprint;
 use Illuminate\Database\Connection;
 use Illuminate\Database\Connectors\MySqlConnector;
-use Illuminate\Database\MySqlConnection;
 use Illuminate\Database\Schema\Blueprint;
-use Closure;
-use Doctrine\DBAL\Types\Type;
-use PDO;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Heychazza\SingleStoreDriver\SingleStoreConnection;
 
 class SingleStoreDriverServiceProvider extends PackageServiceProvider
 {

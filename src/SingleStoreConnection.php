@@ -39,6 +39,6 @@ class SingleStoreConnection extends MySqlConnection
      */
     protected function getDoctrineDriver()
     {
-        return new DoctrineDriver;
+        return new DoctrineDriver();
     }
 }
