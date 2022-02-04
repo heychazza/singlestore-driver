@@ -1,24 +1,27 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "heychazza/singlestore-driver",
+    "description": "My package",
     "keywords": [
-        ":vendor_name",
+        "heychazza",
         "laravel",
-        ":package_slug"
+        "singlestore-driver"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/heychazza/singlestore-driver",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "heychazza",
+            "email": "ch@rli.es",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.0",
         "spatie/laravel-package-tools": "^1.9.2",
-        "illuminate/contracts": "^8.73"
+        "illuminate/contracts": "^8.73",
+        "illuminate/database": "^8.73",
+        "doctrine/dbal": "^2.6|^3.0",
+        "ext-pdo": "*"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.10",
@@ -34,13 +37,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Heychazza\\SingleStoreDriver\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Heychazza\\SingleStoreDriver\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,16 +51,17 @@
         "test-coverage": "vendor/bin/pest --coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
-            }
+                "Heychazza\\SingleStoreDriver\\SingleStoreDriverServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
