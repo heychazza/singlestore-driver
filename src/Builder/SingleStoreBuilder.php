@@ -12,7 +12,7 @@ class SingleStoreBuilder extends MySqlBuilder
 
         foreach ($this->getAllTables() as $row) {
             $row = (array) $row;
-            $this->connection->statement($this->grammar->compileDropAllTables(reset($row)));
+            $this->connection->statement($this->grammar->compileDropTable(reset($row)));
         }
 
         $this->enableForeignKeyConstraints();

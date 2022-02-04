@@ -23,4 +23,9 @@ class SingleStoreGrammar extends MySqlGrammar
         $cols = array_merge($this->getColumns($blueprint), $extraCols);
         return trim(sprintf("%s table %s (%s)", $blueprint->temporary ? "create temporary" : "create", $this->wrapTable($blueprint), implode(", ", $cols)));
     }
+
+    public function compileDropTable($table)
+    {
+        return 'drop table '.$table;
+    }
 }
