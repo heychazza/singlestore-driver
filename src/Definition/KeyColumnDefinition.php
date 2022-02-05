@@ -10,6 +10,7 @@ class KeyColumnDefinition extends ColumnDefinition
     private string $key;
     private StoreType $storeType;
     private bool $sharded = false;
+    private bool $primary = false;
 
     public function __construct($attributes = [])
     {
@@ -17,22 +18,39 @@ class KeyColumnDefinition extends ColumnDefinition
         $this->key = $attributes["key"];
     }
 
-    public function storeType(StoreType $storeType)
+    public function storeType(StoreType $storeType): KeyColumnDefinition
     {
         $this->storeType = $storeType;
 
         return $this;
     }
 
-    public function sharded()
+    public function sharded(): static
     {
         $this->sharded = true;
 
         return $this;
     }
 
+    public function primary(): KeyColumnDefinition
+    {
+        $this->primary = true;
+
+        return $this;
+    }
+
     public function toString()
     {
-        return ($this->sharded ? "SHARD " : "") . "KEY (" . $this->key . ")" . (isset($this->storeType) ? " USING " . $this->storeType->name : "");
+        $keyType = '';
+
+        if($this->sharded)
+        {
+            $keyType .= 'SHARD ';
+        } else if($this->primary)
+        {
+            $keyType .= 'PRIMARY ';
+        }
+
+        return sprintf("%sKEY (%s)%s", $keyType, $this->key, isset($this->storeType) ? " USING " . $this->storeType->name : "");
     }
 }
