@@ -54,7 +54,7 @@ Schema::create("example_table", function (Blueprint $table) {
 
 ## Features
 
-1. Ability to set a `KEY` and `SHARD KEY`.
+1. Ability to set a `KEY`, `SHARD KEY` and `PRIMARY KEY`.
 2. Ability to specify `ROWSTORE` and `COLUMNSTORE` tables.
 3. Ability to use `php artisan db:wipe` that is compatible with SingleStore.
 
