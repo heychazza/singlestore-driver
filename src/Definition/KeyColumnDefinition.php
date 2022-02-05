@@ -43,11 +43,9 @@ class KeyColumnDefinition extends ColumnDefinition
     {
         $keyType = '';
 
-        if($this->sharded)
-        {
+        if ($this->sharded) {
             $keyType .= 'SHARD ';
-        } else if($this->primary)
-        {
+        } elseif ($this->primary) {
             $keyType .= 'PRIMARY ';
         }
 
