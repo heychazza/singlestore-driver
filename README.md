@@ -7,7 +7,7 @@
 
 This package provides SingleStore specific schema options, currently supporting keys & shard keys, alongside setting rowstore and clusterstore tables. In addition, tables are automatically deleted one-by-one when `db:wipe` is ran, as Laravel traditionally deletes all at once - which isn't compatible with SingleStore.
 
-A huge thanks to [Fathom Analytics](https://usefathom.com/ref/PUX1KG) for the motivation to build this package, as I never knew about SingleStore until their blog post. 
+A huge thanks to [Fathom Analytics](https://usefathom.com/ref/PUX1KG) for the motivation to build this package, as I never knew about SingleStore until their [blog post](https://usefathom.com/blog/worlds-fastest-analytics). 
 
 ## Support us
 If this package helped you, feel free to donate to my [PayPal](https://paypal.me/heychazza), every donation regardless of amount is appreciated for my time.
