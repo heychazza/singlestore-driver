@@ -41,11 +41,14 @@ Schema::create("example_table", function (Blueprint $table) {
     // Or, creating a SHARD KEY
     $table->key('nickname')->sharded();
     
+    // Or, creating a PRIMARY KEY
+    $table->key('nickname')->primary();
+    
     // Or, SHARD with ROWSTORE.
     $table->key("nickname")->sharded()->storeType(StoreType::ROWSTORE);
     
     // Or, KEY with COLUMNSTORE.
-    $table->key("nickname")->sharded()->storeType(StoreType::COLUMNSTORE);
+    $table->key("nickname")->storeType(StoreType::COLUMNSTORE);
 });
 ```
 
