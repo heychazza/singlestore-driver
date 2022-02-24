@@ -17,11 +17,10 @@
     ],
     "require": {
         "php": "^8.0",
+        "spatie/laravel-package-tools": "^1.9.2",
+        "illuminate/contracts": "^9.0",
         "ext-pdo": "*",
-        "doctrine/dbal": "^2.6|^3.0",
-        "illuminate/contracts": "v9.2.0",
-        "illuminate/database": "v9.2.0",
-        "spatie/laravel-package-tools": "^1.9.2"
+        "doctrine/dbal": "^2.6|^3.0"
     },
     "require-dev": {
         "nunomaduro/collision": "^6.0",
