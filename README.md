@@ -9,12 +9,15 @@ This package provides SingleStore specific schema options, currently supporting 
 
 A huge thanks to [Fathom Analytics](https://usefathom.com/ref/PUX1KG) for the motivation to build this package, as I never knew about SingleStore until their [blog post](https://usefathom.com/blog/worlds-fastest-analytics). 
 
-## Support us
-If this package helped you, feel free to donate to my [PayPal](https://paypal.me/heychazza), every donation regardless of amount is appreciated for my time.
+## End of Life 😢
+It is with regret that this package has been archived, as the SingleStore team have chosen to build their own official driver using parts from this package. So I no longer have the motivation to keep this going, and instead suggest you check out the official one found [here[(https://github.com/singlestore-labs/singlestore-laravel-driver).
 
-## Installation
+~~## Support us
+If this package helped you, feel free to donate to my [PayPal](https://paypal.me/heychazza), every donation regardless of amount is appreciated for my time.~~
 
-You can install the package via composer:
+~~## Installation
+
+~~You can install the package via composer:
 
 ```bash
 composer require heychazza/singlestore-driver
@@ -29,7 +32,7 @@ Then, within your `database.php` file, edit the `driver` property and set it to 
         ]
 ```
 
-## Example Usage
+~~## Example Usage
 ```php
 Schema::create("example_table", function (Blueprint $table) {
     // ... other options ... //
@@ -52,29 +55,29 @@ Schema::create("example_table", function (Blueprint $table) {
 });
 ```
 
-## Features
+~~## Features
 
-1. Ability to set a `KEY`, `SHARD KEY` and `PRIMARY KEY`.
-2. Ability to specify `ROWSTORE` and `COLUMNSTORE` tables.
-3. Ability to use `php artisan db:wipe` that is compatible with SingleStore.
+~~1. Ability to set a `KEY`, `SHARD KEY` and `PRIMARY KEY`.
+~~2. Ability to specify `ROWSTORE` and `COLUMNSTORE` tables.
+~~3. Ability to use `php artisan db:wipe` that is compatible with SingleStore.
 
-## Changelog
+~~## Changelog
 
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+~~Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Contributing
+~~## Contributing
 
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+~~Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
-## Security Vulnerabilities
+~~## Security Vulnerabilities
 
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+~~Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
-## Credits
+~~## Credits
 
-- [heychazza](https://github.com/heychazza) (Developed it)
-- [Jack Ellis](https://twitter.com]) (For the inspiration to build this)
-- [All Contributors](../../contributors)
+~~- [heychazza](https://github.com/heychazza) (Developed it)
+~~- [Jack Ellis](https://twitter.com]) (For the inspiration to build this)
+~~- [All Contributors](../../contributors)~~
 
 ## License
 
