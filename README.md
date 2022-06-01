@@ -10,7 +10,7 @@ This package provides SingleStore specific schema options, currently supporting 
 A huge thanks to [Fathom Analytics](https://usefathom.com/ref/PUX1KG) for the motivation to build this package, as I never knew about SingleStore until their [blog post](https://usefathom.com/blog/worlds-fastest-analytics). 
 
 ## End of Life 😢
-It is with regret that this package has been archived, as the SingleStore team have chosen to build their own official driver using parts from this package. So I no longer have the motivation to keep this going, and instead suggest you check out the official one found [here[(https://github.com/singlestore-labs/singlestore-laravel-driver).
+It is with regret that this package has been archived, as the SingleStore team have chosen to build their own official driver using parts from this package. So I no longer have the motivation to keep this going, and instead suggest you check out the official one found [here](https://github.com/singlestore-labs/singlestore-laravel-driver).
 
 ~~## Support us
 If this package helped you, feel free to donate to my [PayPal](https://paypal.me/heychazza), every donation regardless of amount is appreciated for my time.~~
